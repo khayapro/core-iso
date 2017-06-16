@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var welcomeBtn: UIButton!
+    @IBOutlet weak var closeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,15 @@ class ViewController: UIViewController {
         background.isHidden = false
         titleImage.isHidden = false
         welcomeBtn.isHidden = true
+        closeBtn.isHidden = false
         
+    }
+    
+    @IBAction func closePressed(_ sender: Any) {
+        background.isHidden = true
+        titleImage.isHidden = true
+        welcomeBtn.isHidden = false
+        closeBtn.isHidden = true
     }
 
 }
